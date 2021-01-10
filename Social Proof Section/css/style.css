@@ -1,0 +1,253 @@
+/* --Global-- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Spartan", sans-serif;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* --Title Section-- */
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "title . ratings"
+    "testimony testimony testimony"
+    "footer footer footer";
+  margin: 100px 200px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.title {
+  position: relative;
+  color: hsl(300, 43%, 22%);
+  grid-area: title;
+  margin-left: 15px;
+  margin-bottom: 60px;
+}
+
+.title h1 {
+  position: relative;
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.title p {
+  position: absolute;
+  font-size: 1rem;
+  line-height: 1.2;
+  width: 400px;
+  margin-bottom: 100px;
+}
+
+/* --Rating Section-- */
+.ratings {
+  display: block;
+  position: relative;
+  grid-area: ratings;
+  margin: 10px;
+  justify-self: flex-end;
+}
+
+.rating1,
+.rating2,
+.rating3 {
+  background-color: hsl(0, 0%, 93%);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  width: 320px;
+}
+
+.stars img {
+  width: 14px;
+}
+
+.ratings h4 {
+  color: hsl(300, 43%, 22%);
+  display: inline;
+  margin-left: 10px;
+}
+
+.rating1 {
+  position: relative;
+  margin-left: -25px;
+  margin-bottom: -8px;
+}
+
+.rating2 {
+  position: relative;
+  margin-left: 0px;
+  margin-bottom: -8px;
+}
+
+.rating3 {
+  position: relative;
+  margin-left: 25px;
+}
+
+/* --Testimony Section-- */
+.testimony {
+  grid-area: testimony;
+  display: grid;
+  grid-template-columns: repeat(3, 31%);
+  grid-gap: 20px;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.testimony-wrapper1,
+.testimony-wrapper2,
+.testimony-wrapper3 {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 5px;
+  padding: 20px;
+  height: 170px;
+}
+
+.testimony p {
+  color: hsl(300, 24%, 96%);
+  line-height: 1.3;
+}
+
+.profile {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 35px;
+}
+
+.profile h4 {
+  color: hsl(300, 24%, 96%);
+}
+
+.profile h5 {
+  color: hsl(333, 80%, 67%);
+}
+
+.profile span {
+  margin-left: 15px;
+}
+
+.testimony-wrapper2 {
+  margin-top: 15px;
+}
+
+.testimony-wrapper3 {
+  margin-top: 30px;
+}
+
+/* --Footer-- */
+.attribution {
+  grid-area: footer;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-areas:
+      "title"
+      "ratings"
+      "testimony"
+      "footer";
+  }
+
+  .title {
+    margin: 0;
+    text-align: center;
+  }
+
+  .title h1 {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .title p {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .stars img {
+    padding: 2px;
+    width: 20px;
+  }
+
+  .ratings h4 {
+    margin-left: 0px;
+  }
+
+  .ratings {
+    margin-top: 20px;
+  }
+
+  .rating1 {
+    display: block;
+    position: relative;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .rating2 {
+    display: block;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .rating3 {
+    display: block;
+    position: relative;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .testimony {
+    grid-template-columns: repeat(1, 90%);
+    grid-gap: 0px;
+  }
+
+  .testimony p {
+    line-height: 1.5;
+  }
+
+  .testimony-wrapper3 {
+    margin-top: 15px;
+  }
+  .attribution {
+    margin-top: 15px;
+    width: 80%;
+  }
+}
